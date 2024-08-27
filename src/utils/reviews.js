@@ -34,7 +34,7 @@ export const deals = [
   },
   {
     name: "APOLLO",
-    link: "../../public/apollo.jpg",
+    link: "../../public/apollo2.png",
   },
   {
     name: "BRIDGESTONE",
@@ -92,4 +92,134 @@ export const deals = [
     name: "LANDSAIL",
     link: "../../public/landsail.png",
   },
+];
+
+export const images = [
+  {
+    id: 1,
+    link: "../../public/ceat2.jpg",
+  },
+  {
+    id: 2,
+    link: "../../public/ceat2.jpg",
+  },
+  {
+    id: 3,
+    link: "../../public/ceat2.jpg",
+  },
+  {
+    id: 4,
+    link: "../../public/ceat2.jpg",
+  },
+  {
+    id: 5,
+    link: "../../public/ceat2.jpg",
+  },
+];
+
+export const services = [
+  {
+    id: 1,
+    name: "Wheel Balancing",
+    link: "../../public/balance.webp",
+  },
+  {
+    id: 2,
+    name: "Wheel Alignment",
+    link: "../../public/align.webp",
+  },
+];
+
+export const tyres = [
+  {
+    title: "AMAZER 4G LIFE",
+    size: "145/80 R12",
+    reviews: "321 Reviews",
+    price: "3136",
+    type: "Tube Type",
+    warranty: "5 Year Warranty",
+    brand: "kelly",
+  },
+  {
+    title: "AMAZER 4G LIFE",
+    size: "145/80 R13",
+    reviews: "321 Reviews",
+    price: "3562",
+    type: "Tubeless",
+    warranty: "5 Year Warranty",
+    brand: "kelly",
+  },
+  {
+    title: "AMAZER 4G LIFE",
+    size: "155/65 R13",
+    reviews: "321 Reviews",
+    price: "3401",
+    type: "Tubeless",
+    warranty: "5 Year Warranty",
+    brand: "kenda",
+  },
+  {
+    title: "AMAZER 4G LIFE",
+    size: "155/70 R13",
+    reviews: "321 Reviews",
+    price: "3774",
+    type: "Tubeless",
+    warranty: "5 Year Warranty",
+    brand: "apollo",
+  },
+  {
+    title: "AMAZER 4G LIFE",
+    size: "165/70 R14",
+    reviews: "321 Reviews",
+    price: "3618",
+    type: "Tubeless",
+    warranty: "5 Year Warranty",
+    brand: "kumho",
+  },
+  {
+    title: "AMAZER 4G LIFE",
+    size: "165/70 R13",
+    reviews: "321 Reviews",
+    price: "4013",
+    type: "Tubeless",
+    warranty: "5 Year Warranty",
+    brand: "landsail",
+  },
+  {
+    title: "AMAZER 4G LIFE",
+    size: "155/65 R14",
+    reviews: "321 Reviews",
+    price: "3628",
+    type: "Tubeless",
+    warranty: "5 Year Warranty",
+    brand: "landsail",
+  },
+  {
+    title: "AMAZER 4G LIFE",
+    size: "165/65 R13",
+    reviews: "321 Reviews",
+    price: "3713",
+    type: "Tubeless",
+    warranty: "5 Year Warranty",
+    brand: "kumho",
+  },
+];
+
+export const brandOptions = [
+  { value: "kelly", label: "Kelly" },
+  { value: "kenda", label: "Kenda" },
+  { value: "apollo", label: "Apollo" },
+  { value: "kumho", label: "Kumho" },
+  { value: "landsail", label: "Landsail" },
+  { value: "kelly", label: "Kelly" },
+  { value: "kenda", label: "Kenda" },
+  { value: "apollo", label: "Apollo" },
+  { value: "kumho", label: "Kumho" },
+  { value: "landsail", label: "Landsail" },
+];
+
+export const sortOptions = [
+  { value: "most-popular", label: "Most Popular" },
+  { value: "lowest-price", label: "Lowest Price" },
+  { value: "highest-price", label: "Highest Price" },
 ];

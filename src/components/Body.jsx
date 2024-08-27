@@ -1,24 +1,28 @@
 import React, { useState } from "react";
 import Reviews from "./Reviews";
 import Deals from "./Deals";
+import "../App.css";
+import { images } from "../utils/reviews";
+import ServicesOffered from "./ServicesOffered";
+import FilterComp from "./FilterComp";
+import PaymentMode from "./PaymentMode";
+import Footer from "./Footer";
 
 const Body = () => {
-  // State to manage which image is clicked
+  const [data, setData] = useState(images);
   const [selectedImage, setSelectedImage] = useState(null);
 
-  // Function to open modal with the selected image
   const openModal = (imageSrc) => {
     setSelectedImage(imageSrc);
   };
 
-  // Function to close modal
   const closeModal = () => {
     setSelectedImage(null);
   };
 
   return (
     <div>
-      <div className="container card text-center mt-2 w-100 ">
+      <div className="container card text-center mt-2 w-100">
         {/* Row wrapper */}
         <div className="row">
           {/* First column */}
@@ -36,11 +40,11 @@ const Body = () => {
             <br />
             <br />
             <span
-              className="float-start mt-1 d-flex"
+              className="float-start mt-1 d-flex text-start"
               style={{ maxWidth: "450px", fontSize: "14px" }}
             >
-              <span className="me-2">📌</span>
-              <span>
+              <span className="me-4">📌</span>
+              <span style={{ fontFamily: "sans-serif" }}>
                 PLOT NUMBER-09 GROUND FLOOR CISF CAMPUS ROAD, AHINSA KHAND-02
                 INDIRAPURAM, Ghaziabad, Uttar Pradesh, 201014
               </span>
@@ -51,120 +55,55 @@ const Body = () => {
               className="float-start mt-1 d-flex"
               style={{ maxWidth: "400px", fontSize: "14px" }}
             >
-              <span className="me-2">🕛</span>
-              <span>Open - Monday to Sunday - 10:00AM to 8:00PM</span>
+              <span className="me-4">🕛</span>
+              <span className="text-secondary">
+                Open - Monday to Sunday - 10:00AM to 8:00PM
+              </span>
             </span>
             <br />
             <br />
             <span className="float-start d-flex">
-              <button className="btn btn-outline-danger m-2 p-2">
+              <button className="btn btn-outline-danger m-2 p-2 ms-4">
                 GET DIRECTIONS
               </button>
             </span>
             <br />
             <br />
             <br />
-            <span className="float-start fw-bold">2278 Google Reviews</span>
+            <span
+              className="float-start fw-bold ms-3"
+              style={{ fontFamily: "sans-serif" }}
+            >
+              2278 Google Reviews
+            </span>
           </div>
 
-          {/* Second column with carousel */}
-          <div className="col-lg-6">
-            <div
-              id="carouselExampleInterval"
-              className="carousel slide"
-              data-bs-ride="carousel"
-            >
-              <div className="carousel-inner">
-                {/* Carousel item with two images */}
-                <div className="carousel-item active" data-bs-interval="10000">
-                  <div className="d-flex justify-content-center">
-                    <img
-                      src="../../public/ceat2.jpg"
-                      className="d-block w-50 m-1"
-                      alt="..."
-                      onClick={() => openModal("../../public/ceat2.jpg")}
-                      style={{ cursor: "pointer" }}
-                    />
-                    <img
-                      src="../../public/ceat2.jpg"
-                      className="d-block w-50 m-1"
-                      alt="..."
-                      onClick={() => openModal("../../public/ceat2.jpg")}
-                      style={{ cursor: "pointer" }}
-                    />
-                  </div>
-                </div>
-                {/* Another carousel item with two images */}
-                <div className="carousel-item" data-bs-interval="2000">
-                  <div className="d-flex justify-content-center">
-                    <img
-                      src="../../public/ceat2.jpg"
-                      className="d-block w-50 m-1"
-                      alt="..."
-                      onClick={() => openModal("../../public/ceat2.jpg")}
-                      style={{ cursor: "pointer" }}
-                    />
-                    <img
-                      src="../../public/ceat2.jpg"
-                      className="d-block w-50 m-1"
-                      alt="..."
-                      onClick={() => openModal("../../public/ceat2.jpg")}
-                      style={{ cursor: "pointer" }}
-                    />
-                  </div>
-                </div>
-                {/* Another carousel item with two images */}
-                <div className="carousel-item">
-                  <div className="d-flex justify-content-center">
-                    <img
-                      src="../../public/ceat2.jpg"
-                      className="d-block w-50 m-1"
-                      alt="..."
-                      onClick={() => openModal("../../public/ceat2.jpg")}
-                      style={{ cursor: "pointer" }}
-                    />
-                    <img
-                      src="../../public/ceat2.jpg"
-                      className="d-block w-50 m-1"
-                      alt="..."
-                      onClick={() => openModal("../../public/ceat2.jpg")}
-                      style={{ cursor: "pointer" }}
-                    />
-                  </div>
+          {/* Image gallery column */}
+          <div className="d-flex auto-scroll col-lg-6">
+            {data.map((image) => (
+              <div className="mt-0 me-4" key={image.id}>
+                <div
+                  className="card mt-4 mb-2"
+                  style={{ width: "18rem", height: "10rem" }}
+                >
+                  <img
+                    src={image.link}
+                    className="card-img-top h-100 w-100 me-3"
+                    alt="images"
+                    onClick={() => openModal(image.link)}
+                    style={{ cursor: "pointer" }} // Add cursor pointer for better UX
+                  />
                 </div>
               </div>
-              <button
-                className="carousel-control-prev"
-                type="button"
-                data-bs-target="#carouselExampleInterval"
-                data-bs-slide="prev"
-              >
-                <span
-                  className="carousel-control-prev-icon"
-                  aria-hidden="true"
-                ></span>
-                <span className="visually-hidden">Previous</span>
-              </button>
-              <button
-                className="carousel-control-next"
-                type="button"
-                data-bs-target="#carouselExampleInterval"
-                data-bs-slide="next"
-              >
-                <span
-                  className="carousel-control-next-icon"
-                  aria-hidden="true"
-                ></span>
-                <span className="visually-hidden">Next</span>
-              </button>
-            </div>
+            ))}
           </div>
         </div>
+
         {/* Bootstrap Modal */}
         {selectedImage && (
           <div
             className="modal fade show"
-            style={{ display: "block" }}
+            style={{ display: "block", backgroundColor: "rgba(0,0,0,0.5)" }}
             tabIndex="-1"
           >
             <div className="modal-dialog modal-dialog-centered">
@@ -187,9 +126,18 @@ const Body = () => {
             </div>
           </div>
         )}
+
         <Reviews />
       </div>
       <Deals />
+      <ServicesOffered />
+      <FilterComp />
+      <span className="container mt-4 d-flex text-secondary">
+        Home /Tyre Dealers/ Tyre Dealers Ghaziabad/ SHREE HEMKUNT TYRES AND
+        SERVICES
+      </span>
+      <PaymentMode />
+      <Footer />
     </div>
   );
 };

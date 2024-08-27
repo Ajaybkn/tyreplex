@@ -1,12 +1,13 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
+import "../App.css";
 
 const Header = () => {
   return (
     <div className="card">
       <nav className="navbar navbar-expand-lg">
-        <div className="container d-flex justify-content-between">
+        <div className="container d-flex justify-content-between align-items-center">
           <img
             src="../../public/images.jpg"
             style={{ height: "35px", marginRight: "10rem" }}
@@ -21,17 +22,18 @@ const Header = () => {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span className="navbar-toggler-icon" />
+            <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
-              <li className="nav-item ">
+              {/* Car Tyres Dropdown */}
+              <li className="nav-item dropdown">
                 <a
                   className="nav-link fw-bold hover-border-bottom"
                   style={{ color: "#130F26" }}
                   href="#"
                   role="button"
-                  id="dropdownAccLink"
+                  id="dropdownCarTyreLink"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
@@ -39,59 +41,38 @@ const Header = () => {
                 </a>
                 <ul
                   className="dropdown-menu mt-2"
-                  style={{ width: "200px" }}
-                  aria-labelledby="dropdownAccLink"
+                  style={{ width: "200px", fontFamily: "sans-serif" }}
+                  aria-labelledby="dropdownCarTyreLink"
                 >
                   <span className="ms-2">Popular Car Tyre Brands</span>
-                  <li>
-                    <a className="dropdown-item fw-bold" href="#">
-                      MRF Tyres
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item fw-bold" href="#">
-                      CEAT Tyres
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item fw-bold" href="#">
-                      Apollo Tyres
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item fw-bold" href="#">
-                      Bridgestone Tyres
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item fw-bold" href="#">
-                      JK Tyres
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item fw-bold" href="#">
-                      Michelin Tyres
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item fw-bold" href="#">
-                      Pirelli Tyres
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item fw-bold" href="#">
-                      All Car Tyres
-                    </a>
-                  </li>
+                  {/* Dropdown items */}
+                  {[
+                    "MRF Tyres",
+                    "CEAT Tyres",
+                    "Apollo Tyres",
+                    "Bridgestone Tyres",
+                    "JK Tyres",
+                    "Michelin Tyres",
+                    "Pirelli Tyres",
+                    "All Car Tyres",
+                  ].map((brand, index) => (
+                    <li key={index}>
+                      <a className="dropdown-item fw-bold" href="#">
+                        {brand}
+                      </a>
+                    </li>
+                  ))}
                 </ul>
               </li>
-              <li className="nav-item">
+
+              {/* Bike Tyres Dropdown */}
+              <li className="nav-item dropdown">
                 <a
                   className="nav-link fw-bold hover-border-bottom"
                   style={{ color: "#130F26" }}
                   href="#"
                   role="button"
-                  id="dropdownAccLink"
+                  id="dropdownBikeTyreLink"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
@@ -100,51 +81,30 @@ const Header = () => {
                 <ul
                   className="dropdown-menu mt-2"
                   style={{ width: "200px" }}
-                  aria-labelledby="dropdownAccLink"
+                  aria-labelledby="dropdownBikeTyreLink"
                 >
                   <span className="ms-2">Popular Bike Tyre Brands</span>
-                  <li>
-                    <a className="dropdown-item fw-bold" href="#">
-                      MRF Tyres
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item fw-bold" href="#">
-                      CEAT Tyres
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item fw-bold" href="#">
-                      Apollo Tyres
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item fw-bold" href="#">
-                      Bridgestone Tyres
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item fw-bold" href="#">
-                      JK Tyres
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item fw-bold" href="#">
-                      Michelin Tyres
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item fw-bold" href="#">
-                      Pirelli Tyres
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item fw-bold" href="#">
-                      All Bike Tyres
-                    </a>
-                  </li>
+                  {/* Dropdown items */}
+                  {[
+                    "MRF Tyres",
+                    "CEAT Tyres",
+                    "Apollo Tyres",
+                    "Bridgestone Tyres",
+                    "JK Tyres",
+                    "Michelin Tyres",
+                    "Pirelli Tyres",
+                    "All Bike Tyres",
+                  ].map((brand, index) => (
+                    <li key={index}>
+                      <a className="dropdown-item fw-bold" href="#">
+                        {brand}
+                      </a>
+                    </li>
+                  ))}
                 </ul>
               </li>
+
+              {/* Other navbar items */}
               <li className="nav-item">
                 <a
                   className="nav-link fw-bold hover-border-bottom"
@@ -154,13 +114,14 @@ const Header = () => {
                   Tyre Pressure
                 </a>
               </li>
-              <li className="nav-item">
+
+              <li className="nav-item dropdown">
                 <a
                   className="nav-link fw-bold hover-border-bottom"
                   style={{ color: "#130F26" }}
                   href="#"
                   role="button"
-                  id="dropdownTyreLink"
+                  id="dropdownCommercialTyreLink"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
@@ -168,7 +129,7 @@ const Header = () => {
                 </a>
                 <ul
                   className="dropdown-menu mt-2"
-                  aria-labelledby="dropdownTyreLink"
+                  aria-labelledby="dropdownCommercialTyreLink"
                 >
                   <li>
                     <a className="dropdown-item fw-bold" href="#">
@@ -177,13 +138,14 @@ const Header = () => {
                   </li>
                 </ul>
               </li>
+
               <li className="nav-item dropdown">
                 <a
                   className="nav-link fw-bold hover-border-bottom"
                   style={{ color: "#130F26" }}
                   href="#"
                   role="button"
-                  id="dropdownAccLink"
+                  id="dropdownAccessoriesLink"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
@@ -191,32 +153,27 @@ const Header = () => {
                 </a>
                 <ul
                   className="dropdown-menu mt-2"
-                  aria-labelledby="dropdownAccLink"
+                  aria-labelledby="dropdownAccessoriesLink"
                 >
-                  <li>
-                    <a className="dropdown-item fw-bold" href="#">
-                      Accessories
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item fw-bold" href="#">
-                      Batteries
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item fw-bold" href="#">
-                      Alloy Wheels
-                    </a>
-                  </li>
+                  {["Accessories", "Batteries", "Alloy Wheels"].map(
+                    (item, index) => (
+                      <li key={index}>
+                        <a className="dropdown-item fw-bold" href="#">
+                          {item}
+                        </a>
+                      </li>
+                    )
+                  )}
                 </ul>
               </li>
+
               <li className="nav-item dropdown">
                 <a
                   className="nav-link fw-bold hover-border-bottom"
                   style={{ color: "#130F26" }}
                   href="#"
                   role="button"
-                  id="dropdownMenuLink"
+                  id="dropdownMoreLink"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
@@ -224,59 +181,41 @@ const Header = () => {
                 </a>
                 <ul
                   className="dropdown-menu mt-2"
-                  aria-labelledby="dropdownMenuLink"
+                  aria-labelledby="dropdownMoreLink"
                 >
-                  <li>
-                    <a className="dropdown-item fw-bold" href="#">
-                      Cash Back Offers
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item fw-bold" href="#">
-                      Find Tyre Dealers
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item fw-bold" href="#">
-                      Company Tyres
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item fw-bold" href="#">
-                      Are you a Tyre Dealer
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item fw-bold" href="#">
-                      Wheel Balancing
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item fw-bold" href="#">
-                      Wheel Alignment
-                    </a>
-                  </li>
+                  {[
+                    "Cash Back Offers",
+                    "Find Tyre Dealers",
+                    "Company Tyres",
+                    "Are you a Tyre Dealer",
+                    "Wheel Balancing",
+                    "Wheel Alignment",
+                  ].map((item, index) => (
+                    <li key={index}>
+                      <a className="dropdown-item fw-bold" href="#">
+                        {item}
+                      </a>
+                    </li>
+                  ))}
                 </ul>
+              </li>
+
+              <li className="nav-item ms-5">
+                <span>
+                  <img
+                    src="../../public/login.jpg"
+                    style={{ height: "25px" }}
+                    alt="Login"
+                  />
+                </span>
+                <button id="btn" className="btn btn-outline-primary ms-2">
+                  Login
+                </button>
               </li>
             </ul>
           </div>
-          <button className="btn btn-primary">Login</button>
         </div>
       </nav>
-
-      <style jsx>{`
-        .dropdown-menu {
-          display: none;
-        }
-
-        .hover-border-bottom:hover {
-          border-bottom: 2px solid red;
-        }
-
-        .nav-item:hover .dropdown-menu {
-          display: block;
-        }
-      `}</style>
     </div>
   );
 };
