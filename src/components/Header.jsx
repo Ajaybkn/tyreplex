@@ -40,7 +40,7 @@ const Header = () => {
                   Car Tyres
                 </a>
                 <ul
-                  className="dropdown-menu mt-2"
+                  className="dropdown-menu "
                   style={{ width: "200px", fontFamily: "sans-serif" }}
                   aria-labelledby="dropdownCarTyreLink"
                 >
@@ -79,7 +79,7 @@ const Header = () => {
                   Bike Tyres
                 </a>
                 <ul
-                  className="dropdown-menu mt-2"
+                  className="dropdown-menu "
                   style={{ width: "200px" }}
                   aria-labelledby="dropdownBikeTyreLink"
                 >
@@ -128,7 +128,7 @@ const Header = () => {
                   Commercial Tyre
                 </a>
                 <ul
-                  className="dropdown-menu mt-2"
+                  className="dropdown-menu "
                   aria-labelledby="dropdownCommercialTyreLink"
                 >
                   <li>
@@ -152,7 +152,7 @@ const Header = () => {
                   Accessories
                 </a>
                 <ul
-                  className="dropdown-menu mt-2"
+                  className="dropdown-menu"
                   aria-labelledby="dropdownAccessoriesLink"
                 >
                   {["Accessories", "Batteries", "Alloy Wheels"].map(
@@ -180,7 +180,7 @@ const Header = () => {
                   More
                 </a>
                 <ul
-                  className="dropdown-menu mt-2"
+                  className="dropdown-menu "
                   aria-labelledby="dropdownMoreLink"
                 >
                   {[
