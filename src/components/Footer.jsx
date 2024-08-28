@@ -25,7 +25,7 @@ const Footer = () => {
             <img
               className="float-end  mt-4"
               style={{ height: "6rem" }}
-              src="../../public/man.webp"
+              src="/man.webp"
             />
           </div>
         </div>
@@ -34,15 +34,15 @@ const Footer = () => {
       <div className="container " style={{ backgroundColor: "white" }}>
         <div className="row  ">
           <div className="col-lg-3 mt-3 ">
-            <img src="../../public/images.jpg" className="h-25" />
+            <img src="/images.jpg" className="h-25" />
             <br />
 
             <img
-              src="../../public/fb.webp"
+              src="/fb.webp"
               className="mt-2 ms-4"
               style={{ height: "25px" }}
             />
-            <img src="../../public/insta.webp" className="mt-2 ms-4" />
+            <img src="/insta.webp" className="mt-2 ms-4" />
           </div>
           <div className="col-lg-3 mt-3">
             <span className="text-secondary">Who We Are</span>

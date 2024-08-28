@@ -32,7 +32,7 @@ const TyreCard = ({ title, size, reviews, price, type, warranty }) => {
           <p className="text-success">Offer available</p>
           <p className="text-muted">{type}</p>
           <img
-            src="../../public/singleTyre.webp"
+            src="/singleTyre.webp"
             alt=""
             width={180}
             className="position-absolute"

@@ -9,7 +9,7 @@ const Header = () => {
       <nav className="navbar navbar-expand-lg">
         <div className="container d-flex justify-content-between align-items-center">
           <img
-            src="../../public/images.jpg"
+            src="/images.jpg"
             style={{ height: "35px", marginRight: "10rem" }}
             alt="Logo"
           />
@@ -203,7 +203,7 @@ const Header = () => {
               <li className="nav-item ms-5">
                 <span>
                   <img
-                    src="../../public/login.jpg"
+                    src="/login.jpg"
                     style={{ height: "25px" }}
                     alt="Login"
                   />

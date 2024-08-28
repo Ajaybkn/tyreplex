@@ -22,98 +22,98 @@ export const reviews = [
 export const deals = [
   {
     name: "MRF",
-    link: "../../public/mrf.png",
+    link: "/mrf.png",
   },
   {
     name: "CEAT",
-    link: "../../public/ceatt.jpg",
+    link: "/ceatt.jpg",
   },
   {
     name: "GoodYear",
-    link: "../../public/goodyear.png",
+    link: "/goodyear.png",
   },
   {
     name: "APOLLO",
-    link: "../../public/apollo2.png",
+    link: "/apollo2.png",
   },
   {
     name: "BRIDGESTONE",
-    link: "../../public/bridgestone.png",
+    link: "/bridgestone.png",
   },
   {
     name: "JK TYRE",
-    link: "../../public/jktyre.png",
+    link: "/jktyre.png",
   },
   {
     name: "PIRELLI",
-    link: "../../public/pirelli.png",
+    link: "/pirelli.png",
   },
   {
     name: "YOKOHAMA",
-    link: "../../public/yokohama.png",
+    link: "/yokohama.png",
   },
   {
     name: "TVS EUROGRIP",
-    link: "../../public/tvs.png",
+    link: "/tvs.png",
   },
   {
     name: "CONTINENTAL",
-    link: "../../public/continental.jpg",
+    link: "/continental.jpg",
   },
   {
     name: "HANKOOK",
-    link: "../../public/hankook.png",
+    link: "/hankook.png",
   },
   {
     name: "RALCO",
-    link: "../../public/ralco.png",
+    link: "/ralco.png",
   },
   {
     name: "MAXXIS",
-    link: "../../public/maxxis.png",
+    link: "/maxxis.png",
   },
   {
     name: "METRO",
-    link: "../../public/metro.jpg",
+    link: "/metro.jpg",
   },
   {
     name: "FIRESTONE",
-    link: "../../public/firestone.png",
+    link: "/firestone.png",
   },
   {
     name: "RALCO",
-    link: "../../public/ralco.png",
+    link: "/ralco.png",
   },
   {
     name: "DUNLOP",
-    link: "../../public/dunlop.png",
+    link: "/dunlop.png",
   },
   {
     name: "LANDSAIL",
-    link: "../../public/landsail.png",
+    link: "/landsail.png",
   },
 ];
 
 export const images = [
   {
     id: 1,
-    link: "../../public/ceat2.jpg",
+    link: "/ceat2.jpg",
   },
   {
     id: 2,
-    link: "../../public/ceat2.jpg",
+    link: "/ceat2.jpg",
   },
   {
     id: 3,
-    link: "../../public/ceat2.jpg",
+    link: "/ceat2.jpg",
   },
   {
     id: 4,
-    link: "../../public/ceat2.jpg",
+    link: "/ceat2.jpg",
   },
   {
     id: 5,
-    link: "../../public/ceat2.jpg",
+    link: "/ceat2.jpg",
   },
 ];
 
@@ -121,12 +121,12 @@ export const services = [
   {
     id: 1,
     name: "Wheel Balancing",
-    link: "../../public/balance.webp",
+    link: "/balance.webp",
   },
   {
     id: 2,
     name: "Wheel Alignment",
-    link: "../../public/align.webp",
+    link: "/align.webp",
   },
 ];
 

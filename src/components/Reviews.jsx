@@ -20,7 +20,7 @@ const Reviews = () => {
                 <div className="card-body">
                   <div className="d-flex align-items-start">
                     <img
-                      src="../../public/pic.png"
+                      src="/pic.png"
                       className="img-fluid"
                       style={{ height: "60px", marginRight: "10px" }}
                       alt="Profile"
